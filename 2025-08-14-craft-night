@@ -1,0 +1,13 @@
+setcpm(144/4)
+
+const drums = s("[bd -] , [- sd], hh*8").bank("tr707").gain(0.2)
+const bass = note("[f2 c3 g2 <g2 a2>]*2").sound("sawtooth").cutoff(400)
+const chords = note("[[f4, <[a4 c4] [a5,c4]>] [c3, e4, g4]]/4").sound("gm_pad_warm").cutoff(800)
+const lead = note("[60, 62, 66, 69, 54, 65]").s("gm_kalimba")
+
+stack(
+  drums,
+  bass,
+  chords,
+  //lead,
+)._punchcard()
